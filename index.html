@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="container mt-[50px] max-w-xl mx-auto">
+        <div class="">
+            <div class="logo">
+                <img class="w-24 h-25 block mx-auto my-auto rounded-full shadow" src="tone.jpg" alt="profile">
+            </div>
+
+            <div class="name">
+                <h1 class="text-3xl text-center font-bold mt-[20px]">Alongkorn Chaichana</h1>
+            </div>
+            <!-- <div class="slogan">
+                <span class="text-center block mb-[35px] mt-2 bg-[] font-light uppercase">i'm frontend developer<span/>
+            </div> -->
+        </div>
+
+        <div class="">
+            <ul class="m-0 text-center w-full mb-[50px]">
+                <li class="inline"><a href="https://github.com/alongkornubu" target="_blank"><i class="fa-brands fa-github duration-300 hover:text-blue-600  hover:rotate-[360deg]"></i></a></li>
+                <li class="inline"><a href="https://discordapp.com/users/531089750983966720" target="_blank"><i class="fa-brands fa-discord duration-300 hover:text-blue-600  hover:rotate-[360deg]"></i></a></li>
+            </ul>
+        </div>
+
+        <p class="text-center">My name is Tone, <b id="age"></b> year old Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illum qui velit sit neque assumenda magnam voluptatibus eligendi voluptatem soluta.</p>
+    
+        <div>
+            <h5 class="text-center text-sm mt-[50px] mb-0 uppercase">PORTFOLIO</h5>
+        </div>
+
+        <div class="grid justify-items-center">
+            <hr class="mt-[10px] w-24">
+        </div>
+
+        <div class="">
+            <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-3 shadow ">
+                <div class="w-full">
+                    <img class="rounded" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+                </div>
+                <div class="rounded w-full">
+                    <img class="rounded" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+                </div>
+                <div class="rounded w-full">
+                    <img class="rounded" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+                </div>
+                <div class="rounded w-full">
+                    <img class="rounded" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <div>
+            <h5 class="text-center text-sm mt-[50px] mb-0 uppercase">Contact Me</h5>
+            
+            <div class="grid justify-items-center">
+                <hr class="mt-[10px] w-24">
+            </div>
+
+            <div class="">
+                <form action="">
+                    <div class="">
+                        <div>
+                            <label for="">Name:
+                                <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                            </label>
+                            
+                        </div>
+                        <div>
+                            <label for="">Email:
+                                <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <textarea class="textarea textarea-bordered" placeholder="Bio"></textarea>
+                    <button class="btn btn-accent">Send</button>
+                </form>
+
+            </div>
+        </div> -->
+
+       
+        <footer class="footer footer-center p-4 bg-[ rgba(51,51,51, 0.5)]  text-base-content">
+                <div>
+                    <p>Copyright © 
+                        <script>
+                            document.write(new Date().getFullYear())
+                            const age = document.getElementById("age");
+                            const day = 24 * 60 * 60 * 1000;
+
+                            round_to = function(precision,value) {
+                                value= parseFloat(value);
+                                power_of_ten = 10 ** precision;
+                                return ((value * power_of_ten) / power_of_ten).toFixed(precision);            
+                            }
+                            day_diff = function(d1,d2) {
+                                return (d2- Date.parse(d1)) / day;
+                            }
+
+                            function update_age() {
+                                age.innerHTML = round_to(8, day_diff('July 30, 2000 ' , new Date())/ 365)
+                            }
+
+                            update_age()
+                            setInterval(function() {
+                                update_age();
+                            },100)
+                            
+                         </script> - All right reserved by Alongkorn Chaichana</p>
+                </div>
+        </footer>
+    </div>
+</body>
+</html>
