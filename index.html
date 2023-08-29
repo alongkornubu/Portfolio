@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,9 @@
 </head>
 <body>
 
+    <button onclick="backtoTop()" class="p-2 bg-[#000] w-10 h-10 right-5 bottom-[1rem] fixed right rounded-full hidden" id="btt" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
     <div class="container mt-[50px] max-w-xl mx-auto">
-        <div class="">
             <div class="logo">
                 <img class="w-24 h-25 block mx-auto my-auto rounded-full shadow" src="tone.jpg" alt="profile">
             </div>
@@ -26,16 +27,22 @@
             <!-- <div class="slogan">
                 <span class="text-center block mb-[35px] mt-2 bg-[] font-light uppercase">i'm frontend developer<span/>
             </div> -->
-        </div>
+      
 
-        <div class="">
+            <!-- Social -->
             <ul class="m-0 text-center w-full mb-[50px]">
                 <li class="inline"><a href="https://github.com/alongkornubu" target="_blank"><i class="fa-brands fa-github duration-300 hover:text-blue-600  hover:rotate-[360deg]"></i></a></li>
                 <li class="inline"><a href="https://discordapp.com/users/531089750983966720" target="_blank"><i class="fa-brands fa-discord duration-300 hover:text-blue-600  hover:rotate-[360deg]"></i></a></li>
+                <li class="inline"><a href="https://twitter.com/MyHorizon617972" target="_blank"><i class="fa-brands fa-twitter duration-300 hover:text-blue-600  hover:rotate-[360deg]"></i></a></li>
             </ul>
-        </div>
 
-        <p class="text-center">My name is Tone, <b id="age"></b> year old Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illum qui velit sit neque assumenda magnam voluptatibus eligendi voluptatem soluta.</p>
+
+
+        <p class="text-center">My name is Tone, 
+            <b id="age"></b> year old . I study in computer science
+            I am likes to learn new things and practice
+            because I want to keep up with technology.
+            practice experience to be easier for code.</p>
     
         <div>
             <h5 class="text-center text-sm mt-[50px] mb-0 uppercase">PORTFOLIO</h5>
@@ -48,20 +55,22 @@
         <div class="">
             <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-3 shadow ">
                 <div class="w-full">
-                    <img class="rounded" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+                    <img class="rounded" src="Movie.PNG" alt="movie" loading="lazy">
                 </div>
                 <div class="rounded w-full">
-                    <img class="rounded" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+                    <img class="rounded" src="fakenews.PNG" alt="fakenews detection" loading="lazy">
                 </div>
                 <div class="rounded w-full">
-                    <img class="rounded" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+                    <img class="rounded" src="weather.PNG" alt="weather app" loading="lazy">
                 </div>
-                <div class="rounded w-full">
+                <!-- <div class="rounded w-full">
                     <img class="rounded" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-                </div>
+                </div> -->
             </div>
 
         </div>
+
+        
 
         <!-- <div>
             <h5 class="text-center text-sm mt-[50px] mb-0 uppercase">Contact Me</h5>
@@ -99,6 +108,8 @@
                     <p>Copyright © 
                         <script>
                             document.write(new Date().getFullYear())
+
+                            // Age
                             const age = document.getElementById("age");
                             const day = 24 * 60 * 60 * 1000;
 
@@ -119,6 +130,25 @@
                             setInterval(function() {
                                 update_age();
                             },100)
+
+                            // Backtotop
+                            const myBtn = document.getElementById("btt");
+
+                            function scrollFunction(){
+                                if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                                    myBtn.style.display = "block";
+                                } else {
+                                    myBtn.style.display = "none"
+                                }
+                            }
+                            window.onscroll = function() {
+                                scrollFunction();
+                            }
+
+                            function backtoTop() {
+                                document.body.scrollTop = 0;
+                                document.documentElement.scrollTop = 0;
+                            }
                             
                          </script> - All right reserved by Alongkorn Chaichana</p>
                 </div>
