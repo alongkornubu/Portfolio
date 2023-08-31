@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" class="scroll-smooth">
+<html lang="en"  class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +12,10 @@
     <!-- daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body data-theme="dark">
 
     <button onclick="backtoTop()" class="p-2 bg-[#000] w-10 h-10 right-5 bottom-[1.5rem] fixed  rounded-full hidden" id="btt" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-
+    
     <div class="container mt-[50px] max-w-xl mx-auto">
             <div class="logo">
                 <img class="w-24 h-25 block mx-auto my-auto rounded-full shadow" src="tone.jpg" alt="profile" loading="lazy">
@@ -53,34 +53,25 @@
         </div>
 
         <div class="">
-            <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-3 shadow ">
-                <!-- <div class="w-full">
-                    <img class="rounded" src="Movie.PNG" alt="movie" loading="lazy">
-                </div>
-                <div class="rounded w-full">
-                    <img class="rounded" src="fakenews.PNG" alt="fakenews detection" loading="lazy">
-                </div>
-                <div class="rounded w-full">
-                    <img class="rounded" src="weather.PNG" alt="weather app" loading="lazy">
-                </div> -->
+            <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-3 shadow">
 
                 <!-- Card -->
                 <div class="card card-compact w-50 bg-base-100 shadow-xl">
-                    <figure><img src="Movie.PNG" alt="Movie"  loading="lazy" /></figure>
+                    <figure><img src="Movie.PNG" alt="Movie"  loading="lazy" onclick="showModal('/movie.png')" /> </figure>
                     <div class="card-body">
                       <h2 class="card-title">Movie</h2>
                       
                     </div>
                   </div>
                 <div class="card card-compact w-50 bg-base-100 shadow-xl">
-                    <figure><img src="fakenews.PNG" alt="Movie" loading="lazy" /></figure>
+                    <figure><img src="fakenews.PNG" alt="Movie" loading="lazy" onclick="showModal('/fakenews.png')" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Fake News Detection</h2>
                      
                     </div>
                   </div>
                 <div class="card card-compact w-50 bg-base-100 shadow-xl">
-                    <figure><img src="weather.PNG" alt="weather app" loading="lazy" /></figure>
+                    <figure><img src="weather.PNG" alt="weather app" loading="lazy" onclick="showModal('weather.png')" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Weather App</h2>
                       
@@ -91,37 +82,51 @@
 
         </div>
 
+         
+     
+
+        <!-- Modal -->
+         <div id="modal"
+        class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+
+        <!-- The close button -->
+        <a class="fixed z-90 top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
+            onclick="closeModal()">&times;</a>
+
+        <!-- A big image will be displayed here -->
+        <img id="modal-img" class="max-w-[800px] max-h-[600px] object-cover" />
+    </div>
+
         
 
-        <!-- <div>
+        <div>
             <h5 class="text-center text-sm mt-[50px] mb-0 uppercase">Contact Me</h5>
             
             <div class="grid justify-items-center">
                 <hr class="mt-[10px] w-24">
             </div>
 
-            <div class="">
+            
                 <form action="">
-                    <div class="">
+                    <div class="grid grid-cols-2 gap-2 mt-2">
                         <div>
-                            <label for="">Name:
-                                <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                            </label>
+                            
+                                <input type="text" placeholder="Name" class="input input-bordered w-full max-w-xs" />
                             
                         </div>
                         <div>
-                            <label for="">Email:
-                                <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                            </label>
+                                <input type="text" placeholder="Email" class="input input-bordered w-full max-w-xs" />
                         </div>
                     </div>
 
-                    <textarea class="textarea textarea-bordered" placeholder="Bio"></textarea>
+                    <div class="mt-2">
+                        <textarea class="textarea textarea-bordered" placeholder="Description"></textarea>                    
+                    </div>
+
                     <button class="btn btn-accent">Send</button>
                 </form>
 
-            </div>
-        </div> -->
+        </div> 
 
        
         <footer class="footer footer-center p-4 bg-[ rgba(51,51,51, 0.5)]  text-base-content">
@@ -170,6 +175,20 @@
                                 document.body.scrollTop = 0;
                                 document.documentElement.scrollTop = 0;
                             }
+
+                            var  modal = document.getElementById("modal");
+
+                            var modalImg = document.getElementById("modal-img");
+
+                            function showModal(src) {
+                                modal.classList.remove('hidden');
+                                modalImg.src = src;
+                            }
+
+                            function closeModal() {
+                                modal.classList.add('hidden');
+                            }
+                            
                             
                          </script> - All right reserved by Alongkorn Chaichana</p>
                 </div>
